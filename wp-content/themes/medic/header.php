@@ -114,6 +114,7 @@
                                     <i class="fa fa-envelope-o"></i>
                               </div>
                               <strong>Email</strong>
+                              <strong>Email</strong>
                               <br>
                               <a href="mailto:<?php echo $medic['header_email']; ?>">
                                 <span><?php echo $medic['header_email']; ?></span>
