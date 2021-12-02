@@ -1,15 +1,25 @@
-<?php get_header(); ?>
+<?php get_header(); 
+    global $medic;
+?>
 
 <!--Page Title-->
-<section class="page-title text-center" style="background-image:url(<?php echo get_template_directory_uri()?>/images/background/3.jpg);">
+<?php var_dump($medic['page_bg']); ?>
+<section class="page-title text-center" style="
+background-color: <?php echo $medic['page_bg']['background-color']; ?>;
+background-repeat: <?php echo $medic['page_bg']['background-repeat']; ?>;
+background-size: <?php echo $medic['page_bg']['background-size']; ?>;
+background-attachment: <?php echo $medic['page_bg']['background-attachment']; ?>;
+background-position: <?php echo $medic['page_bg']['background-position']; ?>;
+background-image: url(<?php echo $medic['page_bg']['background-image']; ?>)
+">
     <div class="container">
         <div class="title-text">
-            <h1>Blog</h1>
+            <h1><?php wp_title(" "); ?></h1>
             <ul class="title-menu clearfix">
                 <li>
-                    <a href="index.html">home &nbsp;/</a>
+                    <a href="<?php echo home_url(); ?>">home &nbsp;/</a>
                 </li>
-                <li>Blog</li>
+                <li><?php wp_title(" "); ?></li>
             </ul>
         </div>
     </div>
@@ -78,9 +88,14 @@
             </div>
         </div>  
         
-        
+      
         <div class="styled-pagination">
-            
+        <?php the_posts_pagination( array(
+            'class'  => '',
+            'screen_reader_test' => '&nbsp',
+            'prev_text' => '<span class="fa fa-angle-left" aria-hidden = "true"></span>',
+            'next_text' => '<span class="fa fa-angle-right" aria-hidden="true">',
+        ) ); ?>
 
             <ul>
                 <li><a class="prev" href="#"><span class="fa fa-angle-left" aria-hidden="true"></span></a></li>

@@ -435,6 +435,28 @@ Redux::set_section($opt_name,array(
 	)
 ));
 
+
+//Page Option
+Redux::set_section($opt_name,array(
+	'title' => 'Page Option',
+	'id'=> 'page_opt',
+	'icon' => 'el el-heart',
+	'fields' => array(
+		array(
+			'title' => 'Page Header Background',
+			'id' => 'page_bg',
+			'type' => 'background',
+			'default'  => array(
+				'background-color' => 'green',
+				'background-image' =>  get_template_directory_uri().'/images/background/3.jpg',
+				'background-size' => 'cover'
+			)
+			
+		)
+	)
+));
+
+
 //Footer Option
 Redux::set_section($opt_name,array(
 	'title' => 'Footer Option',
