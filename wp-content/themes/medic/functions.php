@@ -37,6 +37,19 @@
             'primary'   => __( 'Primary Menu', 'main_menu' ),
             'secondary' => __('Secondary Menu', 'seconday_menu' )
         ) );
+
+        //slider
+        register_post_type('slider', array(
+          'labels' => array(
+              'name' => 'Slider',
+              'add_new' => 'Add New Slide',
+              'add_new_item' => 'Add new slide',
+              'featured_image' => 'Slide Image'
+          ),
+          'public' => true,
+          'menu_icon' => 'dashicons-images-alt2',
+          'supports' => array('title', 'editor', 'thumbnail')
+        ));
     
         /**
          * Enable support for the following post formats:
@@ -55,8 +68,19 @@
         'before_widget' => '<div class="col-md-4 col-sm-6 col-xs-12">',
         'after_widget'  => '</div>',
         'before_title'  => '<h6>',
-        'after_title'   => '</h6>',
+        'after_title'   => '</h6>'
     ) );
+
+    //blog sidebar
+    register_sidebar(array(
+      'name' => __( 'Blog Sidebar', 'medic' ),
+      'id' => 'blog_sidebar',
+      'description' => 'Add your blog widgets',
+      'before_title'  => '<div class="text-title"><h6>',
+      'after_title'   => '</h6></div>',
+      'before_widget' => '<div class="sidebar_item">',
+      'after_widget'  => '</div>'
+    ));
   }
   add_action( 'widgets_init', 'medic_widgets_init' );
 
@@ -75,6 +99,8 @@
   //       'after_title' => '</h6>'
   //     ));
   //   }
+
+
 
 //footer recent shortcode
   add_shortcode('medic_recent_post','medic_recent_function');
@@ -123,4 +149,4 @@
     }
 
 
-    
+require_once('shortcode/slider.php');
