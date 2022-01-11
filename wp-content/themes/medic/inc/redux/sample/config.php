@@ -456,6 +456,124 @@ Redux::set_section($opt_name,array(
 	)
 ));
 
+//featured option
+
+Redux::set_section($opt_name,array(
+	'title' => 'Featured Option',
+	'id'=> 'featured_opt',
+	'icon' => 'el el-heart'
+));
+//emergency
+Redux::set_section($opt_name,array(
+	'title' => 'Emergency',
+	'id'=> 'emergency',
+	'subsection' => true,
+	'fields' => array(
+		array(
+			'title' => 'Icon Name',
+			'id' => 'e_icon_name',
+			'type' => 'text',
+			'default'  => 'fa fa-phone'
+			
+		),
+		array(
+			'title' => 'Title',
+			'id' => 'e_title',
+			'type' => 'text',
+			'default'  => 'EMEGENCY CASES'
+			
+		),
+		array(
+			'title' => 'Emergency Phone',
+			'id' => 'e_phone',
+			'type' => 'text',
+			'default'  => '1-800-700-6200'
+				
+		),
+		array(
+			'title' => 'Emergency Description',
+			'id' => 'e_desc',
+			'type' => 'textarea',
+			'default'  => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
+				
+		)
+	)
+
+));
+//service
+Redux::set_section($opt_name,array(
+	'title' => '24 HOUR SERVICE',
+	'id'=> 'hours_24',
+	'subsection' => true,
+	'fields' => array(
+		array(
+			'title' => 'Icon Name',
+			'id' => 'h_icon_name',
+			'type' => 'text',
+			'default'  => 'fa fa-stethoscope'
+			
+		),
+		array(
+			'title' => 'Title',
+			'id' => 'h_title',
+			'type' => 'text',
+			'default'  => '24 HOUR SERVICE'
+			
+		),
+		array(
+			'title' => 'Hour BTN url',
+			'id' => 'h_btn',
+			'type' => 'text',
+			'default'  => '#'
+				
+		),
+		array(
+			'title' => 'Description',
+			'id' => 'h_desc',
+			'type' => 'textarea',
+			'default'  => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore dignissimos officia dicta suscipit vel eum'
+				
+		)
+	)
+
+));
+//working hour
+Redux::set_section($opt_name,array(
+	'title' => 'WORKING HOURS',
+	'id'=> 'w_hour',
+	'subsection' => true,
+	'fields' => array(
+		array(
+			'title' => 'Icon Name',
+			'id' => 'w_icon_name',
+			'type' => 'text',
+			'default'  => 'fa fa-hourglass-o'
+			
+		),
+		array(
+			'title' => 'Title',
+			'id' => 'w_title',
+			'type' => 'text',
+			'default'  => 'WORKING HOURS'
+			
+		),
+		
+		array(
+			'title' => 'Working Hour Tables',
+			'id' => 'h_w_table',
+			'type' => 'editor',
+			'default'  => '<ul class="w-hours">
+			<li>Mon - Fri  - <span>8:00 - 17:00</span></li>
+			<li>Mon - Fri  - <span>8:00 - 17:00</span></li>
+			<li>Mon - Fri  - <span>8:00 - 17:00</span></li>
+	  </ul>'
+				
+		)
+	)
+
+));
+
+
 
 //Footer Option
 Redux::set_section($opt_name,array(

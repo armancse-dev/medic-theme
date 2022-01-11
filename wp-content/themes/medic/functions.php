@@ -1,8 +1,5 @@
 <?php
 
-    require_once('medic-walker-navmenu.php');
-    require_once('inc/redux/redux-core/framework.php');
-    require_once('inc/redux/sample/config.php');
     
     if ( ! function_exists( 'medic_theme_setup' ) ) :
     /**
@@ -149,4 +146,13 @@
     }
 
 
-require_once('shortcode/slider.php');
+    //shortcode
+    require_once('shortcode/slider.php');
+    require_once('shortcode/featured.php');
+
+    //requires files
+    require_once('medic-walker-navmenu.php');
+    require_once('inc/redux/redux-core/framework.php');
+    require_once('inc/redux/sample/config.php');
+    require_once('inc/cmb2/init.php');
+    require_once('inc/cmb2/functions.php');

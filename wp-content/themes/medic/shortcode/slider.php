@@ -20,10 +20,10 @@ function slider_function(){
             <div class="row">
                 <div class="col-12">
                     <!-- Slide Content Start -->
-                    <div class="content style text-center">
+                    <div class="content style text-<?php echo get_post_meta(get_the_ID(), 's_content_position',true);?>">
                         <h2 class="text-white text-bold mb-2"><?php the_title(); ?></h2>
                         <p class="tag-text mb-5"><?php the_content(); ?></p>
-                        <a href="#" class="btn btn-main btn-white">explore</a>
+                        <a href="<?php echo get_post_meta(get_the_ID(), 'slider_btn_url',true);?>" class="btn btn-main btn-white"><?php echo get_post_meta(get_the_ID(), 'slider_btn',true);?> </a>
                     </div>
                     <!-- Slide Content End -->
                 </div>
