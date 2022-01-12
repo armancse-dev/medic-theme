@@ -47,6 +47,19 @@
           'menu_icon' => 'dashicons-images-alt2',
           'supports' => array('title', 'editor', 'thumbnail')
         ));
+
+        //Best featured
+        register_post_type('best_featured', array(
+          'labels' => array(
+              'name' => 'Best Featured',
+              'add_new' => 'Add New Featured',
+              'add_new_item' => 'Add new featured',
+              'featured_image' => 'Featured Image'
+          ),
+          'public' => true,
+          'menu_icon' => 'dashicons-images-alt2',
+          'supports' => array('title', 'editor', 'thumbnail')
+        ));
     
         /**
          * Enable support for the following post formats:
@@ -149,6 +162,7 @@
     //shortcode
     require_once('shortcode/slider.php');
     require_once('shortcode/featured.php');
+    require_once('shortcode/best-featured.php');
 
     //requires files
     require_once('medic-walker-navmenu.php');
