@@ -60,6 +60,18 @@
           'menu_icon' => 'dashicons-images-alt2',
           'supports' => array('title', 'editor', 'thumbnail')
         ));
+
+        //Services
+        register_post_type('services', array(
+          'labels' => array(
+              'name' => 'Services',
+              'add_new' => 'Add New Services',
+              'add_new_item' => 'Add new Services'
+          ),
+          'public' => true,
+          'menu_icon' => 'dashicons-images-alt2',
+          'supports' => array('title')
+        ));
     
         /**
          * Enable support for the following post formats:
@@ -163,6 +175,8 @@
     require_once('shortcode/slider.php');
     require_once('shortcode/featured.php');
     require_once('shortcode/best-featured.php');
+    require_once('shortcode/service-tab.php');
+    require_once('shortcode/service-slide.php');
 
     //requires files
     require_once('medic-walker-navmenu.php');
