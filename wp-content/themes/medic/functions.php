@@ -96,6 +96,18 @@
           'menu_icon' => 'dashicons-images-alt2',
           'supports' => array('title','editor','thumbnail')
         ));
+
+        //FAQ
+        register_post_type('faq', array(
+          'labels' => array(
+              'name' => 'FAQ',
+              'add_new' => 'Add New faq',
+              'add_new_item' => 'Add new faq'
+          ),
+          'public' => true,
+          'menu_icon' => 'dashicons-images-alt2',
+          'supports' => array('title','editor')
+        ));
     
         /**
          * Enable support for the following post formats:
@@ -203,6 +215,7 @@
     require_once('shortcode/service-slide.php');
     require_once('shortcode/ourDoctors.php');
     require_once('shortcode/review.php');
+    require_once('shortcode/faq.php');
 
     //requires files
     require_once('medic-walker-navmenu.php');
