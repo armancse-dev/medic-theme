@@ -72,6 +72,30 @@
           'menu_icon' => 'dashicons-images-alt2',
           'supports' => array('title')
         ));
+
+        //Doctors
+        register_post_type('doctors', array(
+          'labels' => array(
+              'name' => 'Our Doctors',
+              'add_new' => 'Add New Doctor',
+              'add_new_item' => 'Add new Doctor'
+          ),
+          'public' => true,
+          'menu_icon' => 'dashicons-images-alt2',
+          'supports' => array('title')
+        ));
+
+         //Reviews
+         register_post_type('review', array(
+          'labels' => array(
+              'name' => 'Patients Review',
+              'add_new' => 'Add New Review',
+              'add_new_item' => 'Add new Review'
+          ),
+          'public' => true,
+          'menu_icon' => 'dashicons-images-alt2',
+          'supports' => array('title','editor','thumbnail')
+        ));
     
         /**
          * Enable support for the following post formats:
@@ -177,6 +201,8 @@
     require_once('shortcode/best-featured.php');
     require_once('shortcode/service-tab.php');
     require_once('shortcode/service-slide.php');
+    require_once('shortcode/ourDoctors.php');
+    require_once('shortcode/review.php');
 
     //requires files
     require_once('medic-walker-navmenu.php');

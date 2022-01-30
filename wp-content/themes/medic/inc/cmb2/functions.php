@@ -106,6 +106,41 @@ function cmb2_function() {
      
 	) );
 
+   //Doctors
+   $medic_doctor = new_cmb2_box(array(
+      'id'            => 'doctors',
+		'title'         => 'Doctors Details',
+		'object_types'  => array( 'doctors')
+   ));
+
+   $medic_doctor->add_field( array(
+		'name'       => 'Doctor Name',
+		'id'         => 'd_name',
+		'type'       => 'text',
+      'default'     => 'DR. ROBERT BARRETHION'
+	) );
+
+   $medic_doctor->add_field( array(
+		'name'       => 'Doctor Description',
+		'id'         => 'd_desc',
+		'type'       => 'textarea',
+      'default'     => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, aspernatur.'
+	) );
+
+   $medic_doctor->add_field( array(
+		'name'       => 'Doctor Picture',
+		'id'         => 'd_img',
+		'type'       => 'file'
+	) );
+
+   $medic_doctor->add_field( array(
+		'name'       => 'Read More URL',
+		'id'         => 'd_button',
+		'type'       => 'text_url',
+      'default'     => '#'
+	) );
+
+
 
 
 }
